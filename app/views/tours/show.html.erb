@@ -1,0 +1,12 @@
+<h1><%= @tour.title %></h1>
+
+<%= image_tag(@tour.image.url, alt: 'Image') if @tour.image? %>
+
+<div>
+  <%= link_to 'Edit', edit_tour_path(@tour) %>
+  <%= link_to 'Delete', tour_path(@tour),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</div>
+
+<p><%= link_to 'All tours', tours_path %></p>

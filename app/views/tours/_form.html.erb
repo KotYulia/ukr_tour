@@ -1,0 +1,56 @@
+<%= form_for tour do |f| %>
+  <div>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+  </div>
+
+  <div>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div>
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div>
+    <%= f.label :date %>
+    <%= f.text_field :date %>
+  </div>
+
+  <div>
+    <%= f.label :duration %>
+    <%= f.text_field :duration %>
+  </div>
+
+
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "wysiwyg" %>
+  </div>
+
+
+  <div>
+    <%= f.label :program %>
+    <%= f.text_area :program, class: "wysiwyg" %>
+  </div>
+
+  <%= f.submit %>
+<% end %>
+
+<script>
+    $(function() {
+        $('.wysiwyg').froalaEditor();
+    });
+</script>

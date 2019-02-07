@@ -1,0 +1,34 @@
+.main-slider {
+  padding: 0;
+  img {
+    width: 100%;
+  }
+
+  .carousel-inner {
+    list-style: none;
+    padding: 0;
+  }
+
+  .slide-info {
+    width: 100%;
+    top: 30%;
+    left: 0;
+    h1 {
+      font-size: 8.3rem;
+      color: #fbfbfb;
+      text-transform: uppercase;
+    }
+  }
+  .home-carousel {
+    width: 0;
+    margin-top: 23%;
+    margin-right: 5.7rem;
+    opacity: 1;
+    .carousel-left, .carousel-right {
+      font-size: 3.6rem;
+      padding: 1.6rem 2.2rem;
+      background-color: #000000;
+      color: #ffffff;
+    }
+  }
+}

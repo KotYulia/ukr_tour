@@ -1,0 +1,16 @@
+<div class="user-content">
+  <% if current_user&.admin? || current_user.id == @user.id %>
+    <div class="user-info">
+      <div><%= image_tag(@user.avatar.url, alt: 'Avatar') if @user.avatar? %></div>
+      <h1><%= @user.full_name %></h1>
+      <% if !@user.country.blank? && !@user.city.blank? %>
+        <p><%= @user.country %>, <%= @user.city %></p>
+      <% else %>
+        <p><%= @user.country %> <%= @user.city %></p>
+      <% end %>
+      <div class="crud-links"><%= link_to 'Edit', edit_user_path(current_user) %></div>
+    </div>
+  <% else
+       controller.redirect_to '/login'%>
+  <% end %>
+</div>

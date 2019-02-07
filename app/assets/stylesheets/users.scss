@@ -1,0 +1,43 @@
+.authorization-links, .crud-links {
+  padding: 5px 20px;
+  display: inline-block;
+  background-color: #2E2F30;
+  color: #F7F7F7;
+  a, span {
+    color: #F7F7F7;
+  }
+  a:hover {
+    color: aquamarine;
+    text-decoration: none;
+  }
+}
+
+.user-content {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  h1 {
+    margin: 10px 0;
+  }
+  input, textarea {
+    margin: 5px 0 10px;
+    font-size: 16px;
+    width: 100%;
+  }
+  label {
+    font-size: 20px;
+  }
+  img {
+    width: 200px;
+    border-radius: 50%;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1;
+    margin: 10px 0;
+  }
+  .user-info, .create-task-block {
+    width: 30%;
+  }
+}
+

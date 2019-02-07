@@ -4,12 +4,33 @@
     <title>UkrTour</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Include At.JS style. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/at.js/1.4.0/css/jquery.atwho.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Include TUI CSS. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tui-image-editor@3.2.2/dist/tui-image-editor.css">
+    <link rel="stylesheet" href="https://uicdn.toast.com/tui-color-picker/latest/tui-color-picker.css">
+
+    <!-- Include TUI Froala Editor CSS. -->
+    <link rel="stylesheet" href="../css/third_party/image_tui.min.css">
   </head>
 
   <body>
-    <%= yield %>
+  <div class="container">
+    <div class="authorization-links">
+      <% if current_user %>
+        <span>Logged in as <%= current_user.email %> | </span>
+        <%= link_to "Log Out", logout_path %>
+      <% else %>
+        <%= link_to "Sign Up", signup_path %> |
+        <%= link_to "Log In", login_path %>
+      <% end %>
+    </div>
+  </div>
+
+  <div><%= yield %></div>
   </body>
 </html>
