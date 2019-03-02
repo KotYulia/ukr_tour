@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
@@ -6,7 +7,11 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
 
   resources :users
-  resources :sessions , except: [:edit, :update]
+  resources :sessions , except: [:edit, :update] do
+    collection do
+      get :destroy_admin_user
+    end
+  end
   resources :tours
   root 'tours#index'
 end

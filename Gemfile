@@ -67,6 +67,9 @@ gem 'carrierwave', '~> 1.0'
 
 gem 'pry-rails', :group => :development
 
+
+gem 'activeadmin'
+
 gem 'omniauth-facebook'
 
 gem 'figaro'
