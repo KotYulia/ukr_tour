@@ -74,7 +74,8 @@ gem 'omniauth-facebook'
 
 gem 'figaro'
 
-gem "wysiwyg-rails"
+gem 'activeadmin_froala_editor'
+# gem "wysiwyg-rails"
 gem "font-awesome-sass"
 
 gem 'bootstrap', '~> 4.2.1'
