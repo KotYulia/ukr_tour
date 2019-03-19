@@ -111,6 +111,7 @@ GEM
     ffi (1.9.25)
     figaro (1.1.1)
       thor (~> 0.14)
+    flex-slider-rails (2.7.0)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
     formtastic (3.1.5)
@@ -316,6 +317,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   figaro
+  flex-slider-rails
   font-awesome-sass
   jbuilder (~> 2.5)
   jquery-rails

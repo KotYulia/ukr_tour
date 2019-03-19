@@ -1,7 +1,11 @@
+.authorization-block {
+  background-color: #2E2F30;
+  text-align: right;
+}
 .authorization-links, .crud-links {
   padding: 5px 20px;
   display: inline-block;
-  background-color: #2E2F30;
+
   color: #F7F7F7;
   a, span {
     color: #F7F7F7;

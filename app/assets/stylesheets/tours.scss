@@ -1,34 +1,151 @@
-.main-slider {
-  padding: 0;
+// Index Tours Page
+.flexslider {
+  border: none;
+  .slides {
+    li {
+      height: 300px;
+      overflow: hidden;
+      @media (min-width: 992px) {
+        height: 400px;
+      }
+      @media (min-width: 1200px) {
+        height: 500px;
+      }
+
+      img {
+        position: absolute;
+        bottom: 0;
+      }
+      .flex-caption {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        a {
+          color: #333;
+          padding: 5px 0;
+          background-color: white;
+          box-shadow: 10px 0 0 #fff, -10px 0 0 #fff;
+          cursor: pointer;
+          &:hover {
+            text-decoration: none;
+            color: darkblue;
+          }
+        }
+      }
+    }
+  }
+
+  .flex-direction-nav {
+    display: none;
+  }
+}
+
+.tours-wrapper {
+  .tours-list {
+    padding: 0;
+    list-style: none;
+    li {
+      .tours-item {
+        box-shadow: 0 4px 30px rgba(0,0,0,.1);
+        background-color: #fff;
+      }
+      img {
+        width: 100%;
+      }
+      h2 {
+        padding: 10px;
+        a {
+          color: #333;
+          &:hover {
+            text-decoration: none;
+            color: darkblue;
+          }
+        }
+      }
+      span {
+        display: inline-block;
+        padding: 0 10px 20px;
+      }
+    }
+  }
+}
+
+// Single Tour Page
+
+.header-banner {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  @media (min-width: 992px) {
+    height: 400px;
+  }
+  @media (min-width: 1200px) {
+    height: 500px;
+  }
+
   img {
     width: 100%;
   }
 
-  .carousel-inner {
-    list-style: none;
-    padding: 0;
-  }
-
-  .slide-info {
-    width: 100%;
-    top: 30%;
-    left: 0;
-    h1 {
-      font-size: 8.3rem;
-      color: #fbfbfb;
-      text-transform: uppercase;
+  h1 {
+    position: absolute;
+    bottom: 70px;
+    font-size: 28px;
+    color: #fff;
+    padding: 3px 0;
+    //background-color: rgba(255, 255, 255, 0.5);
+    //box-shadow: 10px 0 0 rgba(255, 255, 255, 0.5), -10px 0 0 rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    @media (min-width: 992px) {
+      font-size: 34px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 38px;
     }
   }
-  .home-carousel {
-    width: 0;
-    margin-top: 23%;
-    margin-right: 5.7rem;
-    opacity: 1;
-    .carousel-left, .carousel-right {
-      font-size: 3.6rem;
-      padding: 1.6rem 2.2rem;
-      background-color: #000000;
-      color: #ffffff;
+  p {
+    position: absolute;
+    bottom: 30px;
+    span {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.tabs-names-block {
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  .names-list {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    li {
+      display: inline-block;
+      &.active-tab {
+        background-color: #fff;
+        transition: all linear 0.3s;
+        &:before {
+          content: '';
+          background-color: darkblue;
+          display: block;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+
+.tabs-descriptions-block {
+  .tab-content {
+    transition: opacity 1s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+
+    &.active-tab-content {
+      opacity: 1;
+      height: auto;
     }
   }
 }

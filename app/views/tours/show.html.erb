@@ -1,12 +1,34 @@
-<h1><%= @tour.title %></h1>
-
-<%= image_tag(@tour.image.url, alt: 'Image') if @tour.image? %>
-
-<div>
-  <%= link_to 'Edit', edit_tour_path(@tour) %>
-  <%= link_to 'Delete', tour_path(@tour),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %>
+<div class="header-banner">
+  <%= image_tag(@tour.image.url, alt: 'Image') if @tour.image? %>
+  <div class="container">
+    <h1><%= @tour.title %></h1>
+    <p><%= 5.times.map{ content_tag(:span, "", class: "fa fa-star") }.reduce(&:+) %></p>
+  </div>
 </div>
 
-<p><%= link_to 'All tours', tours_path %></p>
+<div class="tabs-section">
+  <div class="tabs-names-block">
+    <ul class="container names-list">
+      <li class="active-tab">Описание</li>
+      <li>Программа</li>
+    </ul>
+  </div>
+
+  <div class="tabs-descriptions-block">
+    <ul class="container descriptions-list">
+      <li class="tab-content active-tab-content">
+        <ul class="description-info">
+          <li><%= @tour.category %></li>
+          <li><%= @tour.city %></li>
+          <li><%= @tour.date %></li>
+          <li><%= @tour.duration %></li>
+        </ul>
+        <p><%= @tour.price %></p>
+        <div><%= raw(@tour.description) %></div>
+      </li>
+      <li class="tab-content">
+        <div><%= raw(@tour.program) %></div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -85,3 +85,4 @@ gem 'mini_racer', platforms: :ruby
 
 gem 'bundler'
 
+gem 'flex-slider-rails'

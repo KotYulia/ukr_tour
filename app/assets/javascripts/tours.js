@@ -1,27 +1,15 @@
-jQuery(function($) {
-    $(document).ready(function() {
-        $('.carousel .item:first-child').addClass('active');
+$( document ).ready(function(){
+    $('.flexslider').flexslider();
 
-        // Instantiate the Bootstrap carousel
-        $('.multi-item-carousel').carousel({
-            interval: false
-        });
-
-        // for every slide in carousel, copy the next slide's item in the slide.
-        // Do the same for the next, next item.
-        $('.multi-item-carousel .item').each(function(){
-            var next = $(this).next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-
-            if (next.next().length>0) {
-                next.next().children(':first-child').clone().appendTo($(this));
-            } else {
-                $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-            }
-        });
+    $("ul.names-list").on("click", "li:not(.active-tab)", function() {
+        $(this)
+            .addClass("active-tab")
+            .siblings()
+            .removeClass("active-tab")
+            .closest(".tabs-section")
+            .find("li.tab-content")
+            .removeClass("active-tab-content")
+            .eq($(this).index())
+            .addClass("active-tab-content");
     });
-
 });

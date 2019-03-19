@@ -11,10 +11,8 @@
 // about supported directives.
 //
 //= require jquery3
-//= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require bootstrap
-
+//= require jquery.flexslider
 //= require_tree .
-

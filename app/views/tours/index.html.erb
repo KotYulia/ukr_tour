@@ -1,42 +1,29 @@
-<section class="container-fluid main-slider">
-  <div id="carousel-example-generic" class="carousel slide home-slider" data-ride="carousel">
-    <ul class="carousel-inner" role="listbox">
-      <% @tours[0..2].each do |tour| %>
-        <li class="item">
-          <%= image_tag(tour.image.url, alt: 'Tour image') if tour.image? %>
-          <div class="carousel-caption slide-info">
-            <h2> <%= link_to tour.title, tour_path(tour) %></h2>
-            <p><%= tour.price %>, <%= tour.duration %></p>
+<div class="flexslider">
+  <ul class="slides">
+    <% @tours[0..2].each do |tour| %>
+      <li>
+        <%= image_tag(tour.image.url, alt: 'Tour image') if tour.image? %>
+        <div class="flex-caption">
+          <div class="container">
+            <h2><%= link_to tour.title, tour_path(tour) if tour.title? %></div></h2>
+          </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<div class="tours-wrapper">
+  <div class="container">
+    <ul class="row tours-list">
+      <% @tours.drop(3).each do |tour| %>
+        <li class="col-md-6">
+          <div class="tours-item">
+            <%= image_tag(tour.image.url, alt: 'Tour image', class: "img-responsive" ) if tour.image? %>
+            <h2><%= link_to tour.title, tour_path(tour) if tour.title? %></h2>
+            <span><%= tour.price %></span>
           </div>
         </li>
       <% end %>
     </ul>
-    <a class="left carousel-control home-carousel" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="fa fa-angle-left carousel-left" aria-hidden="true"></span>
-    </a>
-    <a class="right carousel-control home-carousel" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="fa fa-angle-right carousel-right" aria-hidden="true"></span>
-    </a>
   </div>
-
-</section>
-
-
-<h1>Listing tours</h1>
-
-<%= link_to 'Add tour', new_tour_path %>
-
-<ul>
-  <% @tours.each do |tour| %>
-    <li>
-      <%= image_tag(tour.image.url, alt: 'Tour image') if tour.image? %>
-      <h2> <%= link_to tour.title, tour_path(tour) %></h2>
-      <div>
-        <%= link_to 'Edit', edit_tour_path(tour) %>
-        <%= link_to 'Delete', tour_path(tour),
-                    method: :delete,
-                    data: { confirm: 'Are you sure?' } %>
-      </div>
-    </li>
-  <% end %>
-</ul>
+</div>
