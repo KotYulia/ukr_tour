@@ -86,4 +86,6 @@ gem 'pagy'
 group :production do
   gem 'pg', '~> 1.1', '>= 1.1.3'
   gem 'rails_12factor'
+
 end
+gem 'rake'
