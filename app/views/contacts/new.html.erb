@@ -1,0 +1,67 @@
+<div class="contact">
+  <div class="contact-img">
+    <%= image_tag("contact.jpg", alt: "Contact image") %>
+    <h1>Контакты</h1>
+  </div>
+
+  <div class="container">
+    <div id="map"></div>
+    <div class="row address-block">
+      <address class="col-md-4 address-info">
+        <ul class="address-list">
+          <li>
+            <span class="fa fa-map-marker"></span>
+            <ul>
+              <% Contact::ADDRESS.each do |address| %>
+                <li><%= address %></li>
+              <% end %>
+            </ul>
+          </li>
+          <li>
+            <span class="fa fa-phone"></span>
+            <ul>
+              <% Contact::PHONE_NUMBERS.each do |phone| %>
+                <li><%= phone %></li>
+              <% end %>
+            </ul>
+          </li>
+          <li>
+            <span class="fa fa-envelope"></span>
+            <p><%= Contact::EMAIL_ADDRESS %></p>
+          </li>
+          <li>
+            <span class="fa fa-clock-o"></span>
+            <p>График работы:</p>
+            <ul>
+              <% Contact::SCHEDULE.each do |schedule| %>
+                <li><%= schedule %></li>
+              <% end %>
+            </ul>
+          </li>
+          <li>
+            <span class="fa fa-clock-o"></span>
+            <p>Гарячая линия:</p>
+            <p class="hot-line"><%= Contact::HOT_LINE %></p>
+          </li>
+        </ul>
+      </address>
+
+      <div class="col-md-8">
+        <%=  render partial: 'form', :locals => { contact: @contact } %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    function initMap() {
+        var uluru = {lat: 50.4448247, lng: 30.493531};
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 4, center: uluru});
+        var marker = new google.maps.Marker({position: uluru, map: map});
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe9vlvtLQqIeBn7U-lEnaaBWOZhkqnrCA&callback=initMap">
+</script>

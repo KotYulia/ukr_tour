@@ -17,4 +17,16 @@ ActiveAdmin.register Tour do
 
   permit_params :title, :image, :price, :category, :description, :program, :city, :date, :duration
 
+
+  index do
+    column :id
+    column :title
+    column :category
+    column :price
+    column :duration
+    column :created_at
+    column :updated_at
+
+    actions
+  end
 end

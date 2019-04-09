@@ -12,7 +12,6 @@
 //
 //= require jquery3
 //= require activestorage
-//= require turbolinks
 //= require bootstrap
 //= require jquery.flexslider
 //= require_tree .

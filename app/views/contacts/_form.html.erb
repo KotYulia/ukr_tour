@@ -1,0 +1,23 @@
+<%= form_with model: @contact do |f| %>
+  <% if flash[:error].present? %>
+    <p> flash[:error]</p>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, class: 'control-label', for: 'name' %>
+    <%= f.text_field :name, id: 'name', required: true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, class: 'control-label', for: 'name' %>
+    <%= f.text_field :email, required: true, hint: 'leave this field blank' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :subject, class: 'control-label', for: 'subject' %>
+    <%= f.text_field :subject, id: 'subject', required: true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :message, class: 'control-label', for: 'message' %>
+    <%= f.text_area :message, required: true, id: 'message', rows: '5' %>
+  </div>
+  <%= f.submit 'Send Message', class: "send-button" %>
+<% end %>

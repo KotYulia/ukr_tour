@@ -1,16 +1,21 @@
-<!--<div class="user-content">
-  <%# if current_user&.admin? || current_user.id == @user.id %>
+<div class="container">
+  <div class="user-content">
     <div class="user-info">
-      <div><%#= image_tag(@user.avatar.url, alt: 'Avatar') if @user.avatar? %></div>
-      <h1><%#= @user.full_name %></h1>
-      <%# if !@user.country.blank? && !@user.city.blank? %>
-        <p><%#= @user.country %>, <%#= @user.city %></p>
-      <%# else %>
-        <p><%#= @user.country %> <%#= @user.city %></p>
-      <%# end %>
-      <div class="crud-links"><%#= link_to 'Edit', edit_user_path(current_user) %></div>
+      <div><%= image_tag(current_user.avatar.url, alt: 'Avatar') if current_user.avatar? %></div>
+      <h1><%= current_user.full_name %></h1>
+      <% if !current_user.country.blank? && !current_user.city.blank? %>
+        <p><%= current_user.country %>, <%= current_user.city %></p>
+      <% else %>
+        <p><%= current_user.country %> <%= current_user.city %></p>
+      <% end %>
     </div>
-  <%# else
-       controller.redirect_to '/login'%>
-  <%# end %>
-</div>-->
+
+    <div class="crud-links">
+      <%= link_to 'Edit', edit_user_path(current_user) %> |
+      <%= link_to 'Delete', current_user,
+                  method: :delete,
+                  data: { confirm: 'Are you sure?' } %>
+    </div>
+
+  </div>
+</div>

@@ -1,29 +1,45 @@
-<div class="flexslider">
-  <ul class="slides">
-    <% @tours[0..2].each do |tour| %>
-      <li>
-        <%= image_tag(tour.image.url, alt: 'Tour image') if tour.image? %>
-        <div class="flex-caption">
+<% if @tours_all.count > 2 %>
+  <div class="flexslider">
+    <ul class="slides">
+      <% @tours_all[0..2].each do |tour| %>
+        <li>
+          <%= image_tag(tour.image.url, alt: 'Tour image') if tour.image? %>
           <div class="container">
-            <h2><%= link_to tour.title, tour_path(tour) if tour.title? %></div></h2>
+            <div class="flex-caption">
+              <h2><%= link_to tour.title, tour_path(tour.id) if tour.title? %></h2>
+            </div>
           </div>
-      </li>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div class="filters-block">
+  <div class="container">
+    <%= form_with url: tours_path, method: :get, data: { remote: false } do |f| %>
+      <%= f.select :duration, options_for_select(Tour::DURATION, params[:duration]), { include_blank: 'Направление' }, class: 'duration-select' %>
+      <%= f.text_field :title, placeholder: 'Искать в названии тура', value: params[:title], class: 'title-input' %>
+      <%= f.text_field :min_price, placeholder: 'Цена от', value: params[:min_price], class: 'price-input' %>
+      <%= f.text_field :max_price, placeholder: 'Цена до', value: params[:max_price], class: 'price-input' %>
+      <span class="fa fa-search"><%= f.submit "", class: 'search-button' %></span>
     <% end %>
-  </ul>
+  </div>
 </div>
 
 <div class="tours-wrapper">
   <div class="container">
     <ul class="row tours-list">
-      <% @tours.drop(3).each do |tour| %>
+      <% @tours.each do |tour| %>
         <li class="col-md-6">
           <div class="tours-item">
             <%= image_tag(tour.image.url, alt: 'Tour image', class: "img-responsive" ) if tour.image? %>
-            <h2><%= link_to tour.title, tour_path(tour) if tour.title? %></h2>
-            <span><%= tour.price %></span>
+            <h2><%= link_to tour.title, tour_path(tour), class: "title" if tour.title? %></h2>
+            <span><%= tour.price %>грн</span>
           </div>
         </li>
       <% end %>
     </ul>
+    <%= pagy_bootstrap_nav(@pagy).html_safe %>
   </div>
 </div>

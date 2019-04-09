@@ -1,4 +1,12 @@
 ActiveAdmin.setup do |config|
+  #config.authorization_adapter = ActiveAdmin::PunditAdapter
+
+  #this line sets the default policy to application_policy.rb
+ # config.pundit_default_policy = "ApplicationPolicy"
+
+
+
+
   # == Site Title
   #
   # Set the title that is displayed on the main layout

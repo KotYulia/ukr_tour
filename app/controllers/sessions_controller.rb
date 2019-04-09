@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if request.env['omniauth.auth']
       user = User.create_with_omniauth(request.env['omniauth.auth'])
       session[:user_id] = user.id
-      redirect_to user_path(current_user), notice: "Logged in!"
+      redirect_to user_path(current_user)
     else
       user = User.find_by_email(params[:email])
       if user && user.authenticate(params[:password])
@@ -16,12 +16,10 @@ class SessionsController < ApplicationController
           redirect_to admin_root_path
         else
           session[:user_id] = user.id
-          redirect_to user_path(current_user), notice: "Logged in!"
+          redirect_to user_path(current_user)
         end
 
-
       else
-        flash.now.alert = "Email or password is invalid"
         render "new"
       end
     end
@@ -29,6 +27,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
+    session[:user_admin_id] = nil
     redirect_to '/login', notice: "Logged out!"
   end
 

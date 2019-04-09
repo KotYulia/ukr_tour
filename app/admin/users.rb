@@ -16,4 +16,18 @@ ActiveAdmin.register User do
   end
 
   permit_params :email, :password, :password_confirmation, :first_name, :last_name, :city, :country, :avatar, :role
+
+  index do
+    column :id
+    column :email
+    column :first_name
+    column :last_name
+    column :role
+    column :created_at
+    column :updated_at
+
+    actions
+  end
+
+  config.comments = false
 end

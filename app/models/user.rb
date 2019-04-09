@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :tours
+
   attr_accessor :full_name
 
   require 'carrierwave'

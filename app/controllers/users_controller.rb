@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    redirect_to user_path(current_user)
   end
 
   def new
@@ -22,16 +22,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
   end
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
-    if @user.update_attributes(user_params)
+    if current_user.update_attributes(user_params)
       redirect_to user_path(current_user)
     else
       render 'edit'
@@ -39,9 +36,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to root_path, notice: 'user was successfully destroyed.'
+    current_user.destroy
+    session[:user_id] = nil
+    redirect_to '/signup'
   end
 
   private

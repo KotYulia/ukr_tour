@@ -2,8 +2,8 @@
   background-color: #2E2F30;
   text-align: right;
 }
-.authorization-links, .crud-links {
-  padding: 5px 20px;
+.authorization-links {
+  padding: 5px 0;
   display: inline-block;
 
   color: #F7F7F7;
@@ -16,8 +16,21 @@
   }
 }
 
+.crud-links {
+  a {
+    padding: 5px;
+    &:hover {
+      text-decoration: none;
+      color: dimgrey;
+    }
+  }
+}
+
+.edit-block {
+  margin-top: 100px;
+}
 .user-content {
-  margin-top: 20px;
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   h1 {
@@ -40,8 +53,8 @@
     line-height: 1;
     margin: 10px 0;
   }
-  .user-info, .create-task-block {
-    width: 30%;
+  .user-info {
+    width: 100%;
   }
 }
 

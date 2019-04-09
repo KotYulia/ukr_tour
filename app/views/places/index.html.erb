@@ -1,0 +1,27 @@
+<div class="places-wrapper">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <ul class="places-list">
+    <% @places.each do |place| %>
+      <li class="places-item">
+
+        <div class="parallax-container">
+          <div class="parallax">
+            <%= image_tag(place.image.url, alt: 'Place image', class: "img-responsive" ) if place.image? %>
+          </div>
+
+          <div class="places-info">
+            <div class="container">
+              <h2><%= place.title %></h2>
+              <div><%= raw(place.description) %></div>
+            </div>
+          </div>
+        </div>
+
+      </li>
+    <% end %>
+  </ul>
+  <div class="container">
+    <%= pagy_bootstrap_nav(@pagy).html_safe %>
+  </div>
+</div>

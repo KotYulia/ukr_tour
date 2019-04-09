@@ -7,8 +7,13 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Include At.JS style. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/at.js/1.4.0/css/jquery.atwho.min.css">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <script src="https://cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
   </head>
@@ -24,15 +29,15 @@
           <span>Logged in as <%= current_admin_user.email %> | </span>
           <%= link_to "Log Out", logout_path %>
         <% else %>
-          <%= link_to "Sign Up", signup_path %> |
-          <%= link_to "Log In", login_path %>
+          <%= link_to "Log In", login_path %> | <%= link_to "Sign Up", signup_path %>
         <% end %>
+
+        <%= render "tours/navbar" %>
       </div>
     </div>
   </div>
 
   <div><%= yield %></div>
-
 
   </body>
 </html>

@@ -3,15 +3,27 @@
   padding: 10px 20px;
   border: 1px solid #2E2F30;
   margin-top: 20px;
-  .actions input {
-    width: 100%;
-    background-color: #2E2F30;
-    color: #F7F7F7;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    &:hover {
-      background-color: dimgrey;
+  .actions {
+    margin-top: 10px;
+    input {
+      width: 100%;
+      background-color: #2E2F30;
+      color: #F7F7F7;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+
+      &:hover {
+        background-color: dimgrey;
+      }
     }
   }
+}
+
+.signup-block, .login-block {
+  margin-top: 100px;
+}
+
+.field input {
+  width: 100%;
 }

@@ -7,10 +7,53 @@
 @import "sessions";
 @import "users";
 @import "tours";
+@import "contacts";
+@import "places";
 
 body {
   //background-color: #f8fbf6;
   h1, h2, h3, p, a, span, li {
     color: #333;
+  }
+}
+
+.header-block {
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  .logo {
+    border-radius: 50%;
+    width: 60px;
+  }
+
+  .navbar-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      &:first-child {
+        //margin-right: 400px;
+      }
+
+      a {
+        color: #fff;
+        padding: 5px 0;
+        text-shadow:2px 2px #333;
+        cursor: pointer;
+        text-transform: uppercase;
+        &:hover {
+          text-decoration: none;
+          color: #eef178;
+        }
+      }
+    }
   }
 }

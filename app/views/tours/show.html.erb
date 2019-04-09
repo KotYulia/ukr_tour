@@ -18,12 +18,20 @@
     <ul class="container descriptions-list">
       <li class="tab-content active-tab-content">
         <ul class="description-info">
-          <li><%= @tour.category %></li>
-          <li><%= @tour.city %></li>
-          <li><%= @tour.date %></li>
-          <li><%= @tour.duration %></li>
+          <li><span class="fa fa-flag"></span><%= @tour.category %></li>
+          <li><span class="fa fa-map-marker"></span><%= @tour.city %></li>
+          <li><span class="fa fa-globe"></span><%= @tour.duration %></li>
+          <li><span class="fa fa-clock-o"></span><%= @tour.date %></li>
+
         </ul>
-        <p><%= @tour.price %></p>
+        <p class="price">Цена:
+          <%= @tour.price %>
+          <% if @tour.category == "Туры по Европе" %>
+            €
+          <% else %>
+            грн
+          <% end %>
+        </p>
         <div><%= raw(@tour.description) %></div>
       </li>
       <li class="tab-content">

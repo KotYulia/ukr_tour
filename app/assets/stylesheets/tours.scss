@@ -1,6 +1,7 @@
 // Index Tours Page
 .flexslider {
   border: none;
+
   .slides {
     li {
       height: 300px;
@@ -19,17 +20,15 @@
       .flex-caption {
         position: absolute;
         bottom: 50px;
-        left: 0;
-        right: 0;
+
         a {
-          color: #333;
+          color: #fff;
           padding: 5px 0;
-          background-color: white;
-          box-shadow: 10px 0 0 #fff, -10px 0 0 #fff;
+          text-shadow:2px 2px #333;
           cursor: pointer;
           &:hover {
             text-decoration: none;
-            color: darkblue;
+            color: #eef178;
           }
         }
       }
@@ -41,11 +40,45 @@
   }
 }
 
+.filters-block {
+  margin-bottom: 30px;
+  padding: 10px 0 15px;
+  background: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  text-align: center;
+
+  .duration-select {
+    height: 30px;
+    background: #fff;
+  }
+
+  .fa-search {
+    margin-left: 15px;
+    cursor: pointer;
+    &:before {
+      margin-right: -25px;
+    }
+    &:hover {
+      color: #F17033;
+    }
+  }
+
+  .search-button {
+    width: 30px;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
 .tours-wrapper {
   .tours-list {
     padding: 0;
     list-style: none;
     li {
+      margin-bottom: 30px;
       .tours-item {
         box-shadow: 0 4px 30px rgba(0,0,0,.1);
         background-color: #fff;
@@ -94,8 +127,6 @@
     font-size: 28px;
     color: #fff;
     padding: 3px 0;
-    //background-color: rgba(255, 255, 255, 0.5);
-    //box-shadow: 10px 0 0 rgba(255, 255, 255, 0.5), -10px 0 0 rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     @media (min-width: 992px) {
       font-size: 34px;
@@ -122,14 +153,21 @@
     list-style: none;
     li {
       display: inline-block;
+      position: relative;
+      padding: 10px;
+      cursor: pointer;
+
       &.active-tab {
         background-color: #fff;
         transition: all linear 0.3s;
         &:before {
           content: '';
-          background-color: darkblue;
-          display: block;
-          height: 10px;
+          background-color: #fff;
+          height: 1px;
+          position: absolute;
+          width: 100%;
+          bottom: -1px;
+          left: 0;
         }
       }
     }
@@ -137,6 +175,7 @@
 }
 
 .tabs-descriptions-block {
+  padding: 50px 0;
   .tab-content {
     transition: opacity 1s ease-out;
     opacity: 0;
@@ -147,5 +186,33 @@
       opacity: 1;
       height: auto;
     }
+  }
+
+  .description-info {
+    padding: 10px 10px 10px 30px;
+    border: 1px dotted #ddd;
+    background-color: #f4f4f4;
+    @media (min-width: 992px) {
+      width: 70%;
+    }
+
+    li {
+      width: 45%;
+      display: inline-block;
+      margin: 5px;
+      position: relative;
+
+      span {
+        position: absolute;
+        left: -20px;
+        top: 3px;
+        color: #dc8051;
+      }
+    }
+  }
+
+  .price {
+    margin-top: 50px;
+    font-weight: 700;
   }
 }
