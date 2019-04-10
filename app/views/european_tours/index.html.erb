@@ -1,7 +1,7 @@
-<% if @tours_all.count > 2 %>
+<% if @tours.count > 2 %>
   <div class="flexslider">
     <ul class="slides">
-      <% @tours_all[0..2].each do |tour| %>
+      <% @tours[0..2].each do |tour| %>
         <li>
           <%= image_tag(tour.image.url, alt: 'Tour image') if tour.image? %>
           <div class="container">

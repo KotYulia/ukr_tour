@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self) unless ARGV.grep(/assets:precompile/).any?
   get 'european_tours/index'
   get 'ukrainian_tours/index'
-  ActiveAdmin.routes(self)
+  #ActiveAdmin.routes(self)
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   get 'contact' => 'contacts#new'
 
   resources :users
-  resources :sessions , except: [:edit, :update] do
+  resources :sessions, except: [:edit, :update] do
     collection do
       get :destroy_admin_user
     end
