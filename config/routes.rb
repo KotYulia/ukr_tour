@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  ActiveAdmin.routes(self) unless ARGV.grep(/assets:precompile/).any?
+  ActiveAdmin.routes(self) rescue ActiveAdmin::DatabaseHitDuringLoad unless ARGV.grep(/assets:precompile/).any?
   get 'european_tours/index'
   get 'ukrainian_tours/index'
   #ActiveAdmin.routes(self)
