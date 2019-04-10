@@ -6,12 +6,6 @@ RSpec.describe Tour, type: :model do
   let!(:tour2) {Tour.create(title: "test2", description: "Lorem ipsum...", category: "Туры по Европе", duration: "Каменец", price: 200, user_id: "#{admin[:id]}")}
   let!(:tour3) {Tour.create(title: "test3", description: "Lorem ipsum...", category: "Туры по Европе", duration: "Каменец", price: 200, user_id: "#{admin[:id]}")}
 
-  describe "#tours" do
-    context "should have a users method" do
-      it {expect(tour1.user_id).to eq(admin.id)}
-    end
-  end
-
   describe "#title" do
     context "should return valid" do
       it {expect(tour1.title?).to eq(true)}

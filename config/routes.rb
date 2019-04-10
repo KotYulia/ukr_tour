@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self) rescue ActiveAdmin::DatabaseHitDuringLoad unless ARGV.grep(/assets:precompile/).any?
   get 'european_tours/index'
   get 'ukrainian_tours/index'
-  #ActiveAdmin.routes(self)
   get 'signup' => 'users#new'
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'

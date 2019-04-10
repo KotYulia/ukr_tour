@@ -6,12 +6,6 @@ RSpec.describe User, type: :model do
   let!(:tour1) {Tour.create(title: "test1", description: "Lorem ipsum...", category: "Туры по Украине", user_id: "#{admin[:id]}")}
   let!(:tour2) {Tour.create(title: "test2", description: "Lorem ipsum...", category: "Туры по Украине", user_id: "#{admin[:id]}")}
 
-  describe "#has_many" do
-    context "should return 2 tours belongs to 1 user" do
-      it {expect(admin.tours).to include(tour1 && tour2)}
-    end
-  end
-
   describe ".full_name" do
     context "should return user's first and last name" do
       it {expect(user.full_name).to eq(User.first.first_name + " " + User.first.last_name)}

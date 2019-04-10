@@ -1,6 +1,4 @@
 class Tour < ApplicationRecord
-  belongs_to :user
-
   require 'carrierwave'
   require 'carrierwave/orm/activerecord'
   mount_uploader :image, ImageUploader
