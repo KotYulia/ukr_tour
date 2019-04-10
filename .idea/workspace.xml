@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="659f8f42-e624-4b9d-ba6c-5e515b11eb2c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/european_tours/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/european_tours/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/ukrainian_tours/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/ukrainian_tours/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,19 +15,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/ukrainian_tours/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/european_tours/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+            <state relative-caret-position="165">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -107,9 +97,9 @@
         <option value="$PROJECT_DIR$/config/application.yml" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb" />
         <option value="$PROJECT_DIR$/app/views/european_tours/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/ukrainian_tours/index.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb" />
       </list>
     </option>
   </component>
@@ -277,18 +267,18 @@
       <workItem from="1554623907018" duration="38766000" />
       <workItem from="1554716577911" duration="30747000" />
       <workItem from="1554804680945" duration="21808000" />
-      <workItem from="1554878428394" duration="8579000" />
+      <workItem from="1554878428394" duration="9935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="436006000" />
+    <option name="totallyTimeSpent" value="437362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="-14" width="1322" height="783" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49714285" visible="true" weight="0.25899842" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49714285" visible="true" weight="0.25899842" />
       <window_info id="Structure" order="1" sideWeight="0.50285715" side_tool="true" weight="0.23865415" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -301,7 +291,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32874617" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49843505" visible="true" weight="0.41420117" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49843505" visible="true" weight="0.41420117" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5015649" side_tool="true" weight="0.39497042" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -609,13 +599,6 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20190127205258_create_tours.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -630,6 +613,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/ukrainian_tours/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/european_tours/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -637,10 +627,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/ukrainian_tours/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>

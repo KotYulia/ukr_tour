@@ -1,5 +1,9 @@
 class ChangePriceToBeIntegerInTours < ActiveRecord::Migration[5.2]
-  def change
-    change_column :tours, :price, :integer, using: 'age::integer'
+  def up
+    change_column :tours, :price, :integer
+  end
+
+  def down
+    change_column :tours, :price, :integer, using: 'price::integer'
   end
 end
