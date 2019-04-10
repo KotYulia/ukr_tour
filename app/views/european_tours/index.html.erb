@@ -6,7 +6,7 @@
           <%= image_tag(tour.image.url, alt: 'Tour image') if tour.image? %>
           <div class="container">
             <div class="flex-caption">
-              <h2><%= link_to tour.title, european_tours_path(tour) if tour.title? %></h2>
+              <h2><%= link_to tour.title, tour_path(tour.id) if tour.title? %></h2>
             </div>
           </div>
         </li>
