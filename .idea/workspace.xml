@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="659f8f42-e624-4b9d-ba6c-5e515b11eb2c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-    </list>
+    <list default="true" id="659f8f42-e624-4b9d-ba6c-5e515b11eb2c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="90">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -267,12 +263,12 @@
       <workItem from="1554623907018" duration="38766000" />
       <workItem from="1554716577911" duration="30747000" />
       <workItem from="1554804680945" duration="21808000" />
-      <workItem from="1554878428394" duration="9935000" />
+      <workItem from="1554878428394" duration="11287000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="437362000" />
+    <option name="totallyTimeSpent" value="438714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="45" y="-14" width="1322" height="783" extended-state="6" />
@@ -629,8 +625,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20190321162313_change_price_to_be_integer_in_tours.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="90">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="67" />
         </state>
       </provider>
     </entry>
