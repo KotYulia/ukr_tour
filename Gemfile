@@ -80,7 +80,7 @@ gem 'jquery-rails'
 gem 'mini_racer', platforms: :ruby
 gem 'bundler'
 gem 'flex-slider-rails'
-gem "pundit"
+#gem "pundit"
 gem 'pagy'
 
 group :production do

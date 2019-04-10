@@ -21,7 +21,6 @@ class ToursController < ApplicationController
 
   def create
     @tour = Tour.new(tour_params)
-    authorize(@tour)
     if @tour.save
       redirect_to tours_path
     else
@@ -31,7 +30,6 @@ class ToursController < ApplicationController
 
   def update
     @tour = Tour.find(params[:id])
-    authorize(@tour)
     if @tour.update_attributes(tour_params)
       redirect_to tour_path(@tour)
     else
@@ -41,7 +39,6 @@ class ToursController < ApplicationController
 
   def destroy
     @tour = Tour.find(params[:id])
-    authorize(@tour)
     @tour.destroy
 
     redirect_to tours_path
