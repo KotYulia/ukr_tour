@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Place, type: :model do
-  let!(:place) {Place.create(title: "Title", description: "Description", image: "image_path")}
+  let!(:place) { Place.create(title: "Title", description: "Description", image: "image_path") }
 
   describe "#title" do
     context "should return valid" do
